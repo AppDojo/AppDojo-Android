@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="98dp"
+        android:layout_height="66dp"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="138dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="40dp"
+        android:text="TextView"
+        android:textColor="#034923"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        
+        android:text="Sign In" />
+
+</LinearLayout>
