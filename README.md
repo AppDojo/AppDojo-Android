@@ -1,5 +1,7 @@
 # App Dojo Android App
 
+[![Stories in Ready](http://badge.waffle.io/AppDojo/AppDojo-Android.png)](http://waffle.io/AppDojo/AppDojo-Android)
+
 Allows members check in if within proximity of the App Dojo meeting location.
 
 
