@@ -9,31 +9,21 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="183dp"
-        android:text="Password:"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/textUsername"
+        android:id="@+id/textEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textPassword"
         android:layout_alignParentLeft="true"
         android:layout_marginBottom="59dp"
-        android:text="Username:"
+        android:text="@string/email_prompt"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
-        android:id="@+id/editUsername"
+        android:id="@+id/editEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textUsername"
-        android:layout_alignBottom="@+id/textUsername"
+        android:layout_alignBaseline="@+id/textEmail"
+        android:layout_alignBottom="@+id/textEmail"
         android:layout_toRightOf="@+id/textPassword"
         android:ems="10"
         android:inputType="textEmailAddress" >
@@ -45,28 +35,48 @@
         android:id="@+id/editPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textPassword"
-        android:layout_toRightOf="@+id/textPassword"
-        android:ems="10" />
+        android:layout_above="@+id/buttonRegister"
+        android:layout_alignLeft="@+id/editEmail"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editPassword"
+        android:layout_alignTop="@+id/buttonLogin"
+        android:text="@string/register"
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:onClick="register"/>
 
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editPassword"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="52dp"
-        android:text="Login" />
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/editPassword"
+        android:text="@string/login" 
+        android:onClick="login"/>
 
-    <TextView
-        android:id="@+id/textView1"
+    <ImageView
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="19dp"
-        android:autoLink="web"
-        android:text="Sign up to join AppDojo"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/editEmail"
+        android:src="@drawable/appdojo_mascot_logo" 
+        android:contentDescription="@string/logo"/>
+
+    <TextView
+        android:id="@+id/textPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editPassword"
+        android:layout_alignBottom="@+id/editPassword"
+        android:layout_alignParentLeft="true"
+        android:text="@string/password_prompt"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>
