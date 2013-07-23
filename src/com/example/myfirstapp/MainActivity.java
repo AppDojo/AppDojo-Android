@@ -7,7 +7,6 @@ import org.json.JSONObject;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,21 +14,6 @@ import android.widget.TextView;
 import android.app.Activity;
 import android.content.Intent;
 import com.loopj.android.http.*;
-
-/*
- * There is already a popular open source library for dealing with
- * asynchronous requests that can be found here : http://loopj.com/android-async-http/
- * Below is an example of how to use it. Go to the site for more examples
- */
-
-/*AsyncHttpClient client = new AsyncHttpClient();
-client.get("https://appdojo-api.herokuapp.com/users", new AsyncHttpResponseHandler() {
-    @Override
-    public void onSuccess(String response) {
-        TextView tv1 = (TextView)findViewById(R.id.textView1);
-        tv1.setText(response);
-    }
-});*/
 
 public class MainActivity extends Activity 
 {
@@ -65,13 +49,15 @@ public class MainActivity extends Activity
     	    public void onSuccess(String response) 
     	    {
     	    	JSONObject json;
-    	    	JSONObject user;
+    	    	JSONObject user = null;
     	    	
     	    	try 
     	    	{
+    	    		Log.w("test", response);
 					json = new JSONObject(response);
 					user = json.getJSONObject("user");
 					Log.w("test", user.getString("last_name"));
+					Session.set_session(user);
 				} 
     	    	catch (JSONException jsone) 
     	    	{
@@ -90,7 +76,8 @@ public class MainActivity extends Activity
     
     public void register(View reg)
     {
-    	
+    	Intent register = new Intent(this, Register.class);
+    	startActivity(register);
     }
     
 }

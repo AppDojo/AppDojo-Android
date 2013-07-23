@@ -1,0 +1,151 @@
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     	xmlns:tools="http://schemas.android.com/tools"
+    	android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" 
+        tools:context=".Register" >
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" 
+            android:orientation="vertical" >
+            
+            <ImageView
+		        android:id="@+id/imageView1"
+		        android:layout_width="wrap_content"
+		        android:layout_height="100dip"
+		        android:layout_gravity="center"
+		        android:contentDescription="@string/logo"
+		        android:src="@drawable/appdojo_mascot_logo" />
+        
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_gravity="center"
+	            android:padding="5dip">
+	
+	            <TextView
+	                android:id="@+id/textFirstReg"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/f_name_prompt"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/editFirstReg"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="10" 
+	                android:inputType="text">
+	
+	            </EditText>
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" 
+	            android:layout_gravity="center"
+	            android:padding="5dip" >
+	
+	            <TextView
+	                android:id="@+id/textLastReg"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/l_name_prompt"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/editLastReg"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="10" 
+	                android:inputType="text">
+	
+	                <requestFocus />
+	            </EditText>
+	            
+	        </LinearLayout>
+	
+	        <LinearLayout
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            android:layout_gravity="center" 
+	            android:padding="5dip" >
+	
+	            <TextView
+	                android:id="@+id/textEmailReg"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/email_prompt"
+	                android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	            <EditText
+	                android:id="@+id/editEmailReg"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:ems="10"
+	                android:inputType="textEmailAddress" >
+	
+	                <requestFocus />
+	            </EditText>
+	            
+	        </LinearLayout>
+	        
+	        <LinearLayout
+        		android:orientation="horizontal"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" 
+		        android:layout_gravity="center"
+		        android:padding="5dip" >
+        
+		        <TextView
+		        	android:id="@+id/textPassword"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="@string/password_prompt"
+		        	android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+		        <EditText
+		        	android:id="@+id/editPasswordReg"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:ems="10"
+		        	android:inputType="textPassword" />
+        
+    		</LinearLayout>
+    		
+	        <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:padding="5dip" >
+        
+		        <Button
+		        	android:id="@+id/buttonFinish"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="@string/finish" 
+		        	android:textAppearance="?android:attr/textAppearanceMedium"
+		        	android:onClick="finish"/>
+        
+		        <Button
+		        	android:id="@+id/buttonCancel"
+		        	android:layout_width="wrap_content"
+		        	android:layout_height="wrap_content"
+		        	android:text="@string/cancel"
+		        	android:textAppearance="?android:attr/textAppearanceMedium" 
+		        	android:onClick="cancel"/>
+        
+    		</LinearLayout>
+        
+        </LinearLayout>
+        
+    </ScrollView>

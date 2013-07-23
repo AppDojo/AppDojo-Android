@@ -9,5 +9,12 @@
     <string name="login">Login</string>
     <string name="register">Sign up for AppDojo!</string>
     <string name="logo">Logo</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="title_activity_register">Register</string>
+    <string name="f_name_prompt">First Name</string>
+    <string name="l_name_prompt">Last Name</string>
+    <string name="finish">Finish!</string>
+    <string name="cancel">Cancel</string>
 
 </resources>
