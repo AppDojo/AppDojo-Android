@@ -17,4 +17,8 @@ public class Session
 		session_key = user.optString("authentication_token");
 	}
 	
+	public static boolean isLoggedIn()
+	{
+		return session_key == null ? false : true;
+	}
 }

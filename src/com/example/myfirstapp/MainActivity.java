@@ -8,9 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.app.Activity;
 import android.content.Intent;
 import com.loopj.android.http.*;
@@ -58,6 +56,9 @@ public class MainActivity extends Activity
 					user = json.getJSONObject("user");
 					Log.w("test", user.getString("last_name"));
 					Session.set_session(user);
+					Intent login = new Intent();
+					login.setClass(MainActivity.this, Home.class);
+			    	startActivity(login);
 				} 
     	    	catch (JSONException jsone) 
     	    	{

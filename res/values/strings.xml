@@ -16,5 +16,7 @@
     <string name="l_name_prompt">Last Name</string>
     <string name="finish">Finish!</string>
     <string name="cancel">Cancel</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_home">Home</string>
 
 </resources>

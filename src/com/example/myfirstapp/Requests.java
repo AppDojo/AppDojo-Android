@@ -16,11 +16,18 @@ public class Requests
 
 	public static void post(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) 
 	{
-	      client.post(getAbsoluteUrl(url), params, responseHandler);
+	      my_client().post(getAbsoluteUrl(url), params, responseHandler);
 	}
 
 	private static String getAbsoluteUrl(String relativeUrl) 
 	{
 	      return BASE_URL + relativeUrl;
+	}
+	
+	private static AsyncHttpClient my_client()
+	{
+		client.addHeader("Content-Type", "application/json");
+		client.addHeader("Accept", "application/json");
+		return client;
 	}
 }
